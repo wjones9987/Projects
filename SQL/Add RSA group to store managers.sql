@@ -20,11 +20,11 @@ FROM users u
      ON et.endpointkey = e.endpointkey
     JOIN entitlement_values ev 
      ON ev.entitlementtypekey = et.entitlementtypekey 
-    AND ev.entitlement_value = 'CN=app_RSA_Store,OU=Security,OU=Groups,OU=REI,DC=reicorpnet,DC=com'
+    AND ev.entitlement_value = 'CN=xxx_xxx_xxx,OU=Security,OU=Groups,OU=REI,DC=reicorpnet,DC=com'
 WHERE
 u.statuskey = 1
        AND u.customproperty19 = 'R'
        AND a.status IN ( '1', 'Manually Provisioned' )
        AND a.endpointkey = '2'
        AND u.employeetype = 'EMPLOYEE'
-       AND u.jobcode IN ( 'R511002', 'R511003', 'R511004', 'R511005', 'R519004', 'R521007', 'R601009', 'R601007', 'R511000', 'R609014', 'R951032', 'U9514201', 'U9501201' )
+       AND u.jobcode IN ( 'Rxxxxxx', 'Rxxxxxx', 'Rxxxxxx', 'Rxxxxxx', 'Rxxxxxx', 'Rxxxxxx', 'Uxxxxxx', 'Uxxxxxx' )
