@@ -16,7 +16,7 @@ FROM   users
          ON entitlement_types.endpointkey = endpoints.endpointkey
        JOIN entitlement_values 
          ON entitlement_values.entitlementtypekey = entitlement_types.entitlementtypekey 
-            AND entitlement_values.entitlement_value = 'CN=App_Proofpoint_URLisolation_pilotusers,OU=Security,OU=Groups,OU=REI,DC=reicorpnet,DC=com'
+            AND entitlement_values.entitlement_value = 'CN=xxx_xxx_xxx_pilotusers,OU=Security,OU=Groups,OU=REI,DC=reicorpnet,DC=com'
        LEFT OUTER JOIN account_entitlements1 
                     ON accounts.accountkey = account_entitlements1.accountkey 
                        AND account_entitlements1.entitlement_valuekey = 
@@ -27,4 +27,4 @@ WHERE  account_entitlements1.entitlement_valuekey IS NULL
        AND accounts.endpointkey = '2'
        AND users.employeetype IN ( 'EMPLOYEE','CONTRACTOR') 
        AND accounts.customproperty22 IS NOT NULL
-       AND entitlement_values.entitlement_value != 'CN=App_Proofpoint_URLisolation_pilotusers,OU=Security,OU=Groups,OU=REI,DC=reicorpnet,DC=com'
+       AND entitlement_values.entitlement_value != 'CN=xxx_xxx_xxx_pilotusers,OU=Security,OU=Groups,OU=REI,DC=reicorpnet,DC=com'
